@@ -1,10 +1,16 @@
-# Local Projects
+# Programming Projects and Academic Exercises
 
-A collection of my local programming projects and university exercises, organized by topic. Each project has its own README with prerequisites, usage, and known limitations.
+## Overview
 
-## Projects
+This repository brings together fourteen programming projects and practical exercises spanning application development, algorithms, data modelling, scientific computing, and embedded control. Each directory constitutes an independent study with its own implementation requirements and execution procedure.
 
-| Project | Description |
+## Educational Scope
+
+The collection supports the study of software architecture, object-oriented design, declarative programming, data acquisition, relational persistence, formal languages, and numerical optimization. It includes both executable demonstrations and incomplete models retained for examination. No common assessment framework or measured performance comparison is claimed.
+
+## Project Catalogue
+
+| Project | Subject and implementation |
 | --- | --- |
 | [375Scores Football Dashboard](375scores/README.md) | A React and Vite football interface with an Express/PostgreSQL API for countries, competitions, teams, players, matches, news, search, and user profiles. |
 | [AI Algorithms and Prolog Exercises](ai-algorithms/README.md) | Python graph-search and machine-learning exercises alongside Prolog knowledge bases and puzzle exercises. |
@@ -21,14 +27,18 @@ A collection of my local programming projects and university exercises, organize
 | [Arduino Traffic Light Exercise](traffic-light-controller/README.md) | A simple Arduino-style traffic-light sequence using digital outputs 5, 6, and 7. |
 | [Linear Programming Exercise](linear-programming/README.md) | A six-variable linear optimization example using NumPy and SciPy HiGHS to maximize a constrained production profit. |
 
-## Getting started
+## Repository Organization and Reproduction
 
-Clone this repository, choose a project, and follow its README. Projects are independent; there is no shared install command or unified build. Python dependency files list direct packages without pinning versions because the original projects did not provide reproducible environments.
+Each project README describes its objectives, methodology, source organization, execution environment, and limitations. Select a directory and follow its instructions; the collection has no unified installation or build process. Python requirement files identify direct dependencies without version pins, so they do not define fully reproducible environments. Dataset-dependent examples require separately obtained input data.
 
-## About this collection
+## Validation and Interpretation
 
-This is a source snapshot of local work, including unfinished coursework. Dependencies, archives, executables, saved chats, private environment files, downloaded datasets, and unrelated personal documents were excluded. Existing portfolio repositories and a portfolio linked to another GitHub account were not duplicated. Original local folders were left unchanged.
+The [validation report](VALIDATION.md) records the syntax and compiler checks performed. Such checks do not establish end-to-end behavior. External API availability, database integration, model evaluation, and embedded hardware behavior require additional verification in the relevant environment. Incomplete components are identified in the individual project documentation.
 
-The publication copy of 375Scores uses PostgreSQL environment variables instead of a hardcoded password and adds a Vite development API proxy. Runtime database schemas and data are not bundled. No live scraping, database integration, or Arduino hardware tests were performed.
+## Distribution Notes
 
-See [VALIDATION.md](VALIDATION.md) for checks and existing source issues. No license has been added; retain any notices in the individual source files.
+The collection contains source material rather than complete execution environments. Generated outputs, dependency directories, executables, private configuration, saved conversations, and unrelated documents are excluded. The football application reads PostgreSQL credentials from environment variables and includes a development API proxy. Database schemas and datasets are not bundled. No repository-wide license has been assigned; existing source notices remain applicable.
+
+## Related Project
+
+The [Weather Forecast Client](https://github.com/Sohaybherr/weather-forecast) is maintained in a separate repository and documents an API-based geocoding and forecast retrieval workflow.
