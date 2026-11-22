@@ -1,0 +1,59 @@
+<livre>
+<auteurs>
+<auteur id="1">
+<nom>sohayb</nom>
+<prenom>ben</prenom>
+</auteur>
+<auteur id="2">
+<nom>rodri</nom>
+<prenom>ben</prenom>
+</auteur>
+</auteurs>
+<section id="1">
+<chapitre id ="1">
+<paragraphe id="1" >
+<titre id="definition">
+ XML est un langage de balisage extensible qui sert à représenter et structurer des 
+données sous forme textuelle  
+</titre>
+<titre id="Caracteristiques">
+ - Extensibilité
+ - Lisibilité humaine
+ - Indépendance de la plateforme
+ - Hiérarchisation des données
+ - Support universel
+</titre>
+<titre id ="HTMLvsXML">
+- XML est pour décrire des donnée, mais HTML est  pour afficher des donnée.
+- XML utilise des balises personnalisé, mais HTML utilise des balises fixe.
+- XML est plus strict, mais HTML est plus flexible.
+</titre>
+</paragraphe>
+<paragraphe id="2"></paragraphe>
+</chapitre>
+<chapitre id ="2">
+<paragraphe id ="1"><titre id =""></titre><p1>c est exemple de paragraphe</p1></paragraphe>
+<paragraphe id ="2"><titre id =""></titre><p2>c est exemple de paragraphe</p2></paragraphe>
+</chapitre>
+</section>
+<section id="2">
+<chapitre id="1">
+<paragraphe id="1" >
+<titre id ="composants cle XML">
+Élément racine (optionel)
+une balise ouvrante  
+une balise fermante
+attributs
+ Contenu textuel et entités
+</titre>
+</paragraphe>
+<paragraphe id="2">
+<titre id=""></titre>
+</paragraphe>
+</chapitre>
+<chapitre id ="2">
+<paragraphe id ="1"><titre id =""></titre><p1>c est exemple de paragraphe</p1></paragraphe>
+<paragraphe id ="2"><titre id =""></titre><p2>c est exemple de paragraphe</p2></paragraphe>
+</chapitre>
+</section>
+</livre>

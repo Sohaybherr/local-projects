@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="file.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<?xml-stylesheet href="file.xsl" type="text/xsl"?>
+<?xml-model href="conve.dtd" type="application/xml-dtd"?>
+<conference code="CONF2026" city="Berlin" date="2026-03-20">
+  <participants>
+    <participant id="P1" type="student">
+      <name>Yazid</name>
+      <email>yazid@example.com</email>
+      <country>DE</country>
+    </participant>
+    &a; 
+    <participant id="P2" type="pro">
+      <name>Halima</name>
+      <email>halima@example.com</email>
+      <country>MA</country>
+    </participant>
+  </participants>
+
+  <sessions>
+    <session id="S1" track="xml" level="beginner">
+      <title>XML Foundations</title>
+      <speaker ref="P2"/>
+      <duration minutes="45"/>
+      <room>R1</room>
+      <tags>
+        <tag>xpath</tag>
+        <tag>dtd</tag>
+      </tags>
+    </session>
+
+    <session id="S2" track="data" level="advanced">
+      <title>XQuery in Practice</title>
+      <speaker ref="P1"/>
+      <duration minutes="60"/>
+      <room>R2</room>
+      <tags>
+        <tag>xquery</tag>
+        <tag>xpath</tag>
+      </tags>
+    </session>
+  </sessions>
+
+  <tickets>
+    <ticket id="T1" participant="P1" category="standard" price="49.90"/>
+    <ticket id="T2" participant="P2" category="vip" price="99.00"/>
+  </tickets>
+</conference>

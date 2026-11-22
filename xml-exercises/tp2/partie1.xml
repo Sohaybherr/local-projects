@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE conference SYSTEM "partie1.dtd">
+<conference lieu="fes" annee="2025" nom="Conférence Internationale sur les Technologies Avancées">
+    <sessions>
+        <session id="p1" thematique="Intelligence Artificielle" periode="matin">
+            <date>2025-09-15</date>
+            <presentations>
+            <presentation id="l1">
+                <titre>Les avancées récentes en IA</titre>
+                <intervenants>
+                    <intervenant role="auteur">
+                    <nom> messi</nom>
+                    <prenom>amine</prenom>
+                    <affiliation>Université de Fès</affiliation>
+                    </intervenant>
+                    <intervenant role="co-auteur">
+                    <nom>ronaldo</nom>
+                    <prenom>cristiano</prenom>
+                    <affiliation>Université de Lisbonne</affiliation>
+                    </intervenant>
+                 </intervenants>
+                 <salle>Auditorium A</salle>
+            </presentation>
+            <presentation id="l2" >
+                <titre>Apprentissage profond et réseaux de neurones</titre>
+                <intervenants>
+                    <intervenant role="auteur">
+                    <nom>rivaldo</nom>
+                    <prenom>sohayb</prenom>
+                    <affiliation>Université de san paolo</affiliation>
+                    </intervenant>
+                    <intervenant role="co-auteur">
+                    <nom>karim</nom>
+                    <prenom>benzema</prenom>
+                    <affiliation>Université de paris</affiliation>
+                    </intervenant>
+                 </intervenants>
+                 <salle>Auditorium B</salle>
+            </presentation>
+            </presentations>
+        </session>
+        <session id="p2" thematique="Technologies Vertes" periode="après-midi">
+          <date>2025-09-15</date>
+          <presentations>
+            <presentation id="l1" >
+                <titre>Innovations dans les énergies renouvelables</titre>
+                <intervenants>
+                    <intervenant role="auteur">
+                    <nom>ronaldo</nom>
+                    <prenom>nazario</prenom>
+                    <affiliation>Université de rio</affiliation>
+                    </intervenant>
+                    <intervenant role="co-auteur">
+                    <nom>zidane</nom>
+                    <prenom>zinedine</prenom>
+                    <affiliation>Université de marseille</affiliation>
+                    </intervenant>
+                 </intervenants>
+                 <salle>Salle 101</salle>
+            </presentation>
+            <presentation id="l2" >
+                <titre>Smart Cities et durabilité</titre>
+                <intervenants>
+                    <intervenant role="auteur">
+                    <nom>neymar</nom>
+                    <prenom>jr</prenom>
+                    <affiliation>Université de sao paolo</affiliation>
+                    </intervenant>
+                    <intervenant role="co-auteur">
+                    <nom>mbappe</nom>
+                    <prenom>kylian</prenom>
+                    <affiliation>Université de paris</affiliation>
+                    </intervenant>
+                 </intervenants>
+                 <salle>Salle 102</salle>
+            </presentation>
+        </session>
+    </sessions>
+   
+
+
+
+</conference>

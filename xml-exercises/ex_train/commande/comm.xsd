@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:simpleType name="Quantity_type">
+        <xs:restriction base="xs:int">
+            <xs:minExclusive value="0"></xs:minExclusive>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="supp_zero_Type">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="-1"></xs:minExclusive>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="article_type">
+        <xs:sequence>
+            <xs:element name="nom" type="xs:string"></xs:element>
+            <xs:element name="quantite" type="Quantity_type"></xs:element>
+            <xs:element name="prix_uni" type="supp_zero_Type"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="commande">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="client" type="xs:string"></xs:element>
+                <xs:element name="date" type="xs:date"></xs:element>
+                <xs:element name="total" type="supp_zero_Type"></xs:element>
+                <xs:element name="articles">
+                   <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="article" type="article_type" maxOccurs="unbounded"></xs:element>
+                    </xs:sequence>
+                   </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="numero" type="xs:integer" use="required"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

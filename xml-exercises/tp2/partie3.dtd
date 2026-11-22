@@ -1,0 +1,42 @@
+<!ELEMENT conference (programme,URLs?)>
+<!ATTLIST conference
+    nom CDATA #REQUIRED
+    lieu CDATA #REQUIRED
+    annee CDATA #REQUIRED
+>
+<!ELEMENT URLs (URL*)>
+<!ELEMENT URL (#PCDATA)>
+<!ATTLIST URL
+    type CDATA #REQUIRED
+>
+<!ELEMENT programme (session+)>
+<!ELEMENT session (date, presentations,modrateur?)>
+<!ATTLIST session
+    id ID #REQUIRED
+    thematique CDATA #REQUIRED
+    periode CDATA #REQUIRED
+    etat (en_ligne|en_presentiel|hybride) #REQUIRED
+>
+<!ELEMENT modrateur (#PCDATA)>
+<!ATTLIST modrateur
+    id ID #REQUIRED
+>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT presentations (presentation+)>
+<!ELEMENT presentation (titre, intervenants, salle)>
+<!ATTLIST presentation
+    id ID #REQUIRED
+>
+<!ELEMENT salle (#PCDATA)>
+<!ELEMENT titre (#PCDATA)>
+<!ELEMENT intervenants (intervenant+)>
+<!ELEMENT intervenant (nom, prenom, affiliations)>
+<!ATTLIST intervenant
+    role (auteur|co-auteur) #REQUIRED 
+    nationalite  (marocain|etranger) "marocain"
+    affiliation_ref IDREF #IMPLIED  
+>
+<!ELEMENT nom (#PCDATA)>    
+<!ELEMENT prenom (#PCDATA)>
+<!ELEMENT affiliations (affiliation+)>
+<!ELEMENT affiliation (#PCDATA)>

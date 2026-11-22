@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="st3.xsl"?>
+<employes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <employe poste="dev" salaire="6000">Ayoub</employe>
+    <employe poste="chef" salaire="12000">Sara</employe>
+    <employe poste="dev" salaire="8000">Hamza</employe>
+</employes>

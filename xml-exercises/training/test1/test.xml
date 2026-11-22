@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type="text/xsl" href="test.xsl"?>
+<personnes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <personne>
+        <nom>Yazid</nom>
+        <age>23</age>
+    </personne>
+    <personne>
+        <nom>Anas</nom>
+        <age>20</age>
+    </personne>
+</personnes>

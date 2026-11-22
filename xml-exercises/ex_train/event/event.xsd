@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="codeType">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="EVT[0-9]{4}"></xs:pattern>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="nonVide">
+    <xs:restriction base="xs:string">
+        <xs:minLength value="1"></xs:minLength>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="posInt">
+    <xs:restriction base="xs:int">
+        <xs:minExclusive value="0"></xs:minExclusive>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="langueType">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="ang"></xs:enumeration>
+        <xs:enumeration value="fra"></xs:enumeration>
+        <xs:enumeration value="ara"></xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="inviteType">
+    <xs:sequence>
+        <xs:element name="num" type="posInt"></xs:element>
+        <xs:element name="nom" type="nonVide"></xs:element>
+        <xs:element name="nometa" type="nonVide"></xs:element>
+        <xs:element name="langue" type="langueType"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="interType">
+    <xs:sequence>
+          <xs:element name="num" type="posInt"></xs:element>
+        <xs:element name="nom" type="nonVide"></xs:element>
+        <xs:element name="nometa" type="nonVide"></xs:element>
+        <xs:element name="langue" type="langueType"></xs:element>
+        <xs:element name="theme" type="nonVide"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="event">
+    <xs:complexType>
+        <xs:sequence>
+           <xs:element name="particpant">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="unbounded">
+                <xs:element name="invite" type="inviteType"></xs:element>
+                <xs:element name="inter" type="interType"></xs:element>
+               </xs:choice>
+            </xs:complexType>
+            <xs:unique name="uniquenum">
+                 <xs:selector xpath="invite | intervenant"/>
+                 <xs:field xpath="num"/>
+            </xs:unique>
+           </xs:element>
+        </xs:sequence>
+        <xs:attribute name="code" type="codeType"></xs:attribute>
+        <xs:attribute name="date" type="xs:date"></xs:attribute>
+        <xs:attribute name="ville" type="nonVide"></xs:attribute>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

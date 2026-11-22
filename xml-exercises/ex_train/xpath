@@ -1,0 +1,13 @@
+//titre
+//livre[@prix >40]
+//auteur[@pays="MA"]
+//livre[annee >2019]/titre
+//livre[position()=1]/@isbn
+count(//livre)
+//livre[not(@prix > //livre/@prix)]
+
+//livre[@prix]
+//contain('xml')
+//livre[auteur="ali"]
+//livre[position()=last()]
+??

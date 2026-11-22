@@ -1,0 +1,35 @@
+<!ELEMENT conference (sessions)>
+<!ATTLIST conference
+    nom CDATA #REQUIRED
+    lieu CDATA #REQUIRED
+    annee CDATA #REQUIRED
+>
+<!ELEMENT sessions (session+)>
+<!ELEMENT session (date, presentations,modrateur?)>
+<!ATTLIST session
+    id ID #REQUIRED
+    thematique CDATA #REQUIRED
+    periode CDATA #REQUIRED
+>
+<!ELEMENT modrateur (#PCDATA)>
+<!ATTLIST modrateur
+    id ID #REQUIRED
+>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT presentations (presentation+)>
+<!ELEMENT presentation (titre, intervenants, salle)>
+<!ATTLIST presentation
+    id ID #REQUIRED
+>
+<!ELEMENT salle (#PCDATA)>
+<!ELEMENT titre (#PCDATA)>
+<!ELEMENT intervenants (intervenant+)>
+<!ELEMENT intervenant (nom, prenom, affiliation)>
+<!ATTLIST intervenant
+    role (auteur|co-auteur) #REQUIRED 
+    nationalite  (marocain|etranger) "marocain"  
+>
+<!ELEMENT nom (#PCDATA)>    
+<!ELEMENT prenom (#PCDATA)>
+<!ELEMENT affiliation (#PCDATA)>
+

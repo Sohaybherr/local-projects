@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="store.xsd" type="application/xml"?>
+<?xml-stylesheet href="store.xsl" type="text/xsl"?>
+<store name="TechShop" location="MA" created="2026-01-10">
+  <catalog>
+    <product sku="PR1" category="laptop">
+      <label>Lenovo IdeaPad</label>
+      <price currency="MAD">7999.00</price>
+      <stock>12</stock>
+    </product>
+    <product sku="PR2" category="phone">
+      <label>Samsung A55</label>
+      <price currency="MAD">3999.50</price>
+      <stock>30</stock>
+    </product>
+  </catalog>
+
+  <customers>
+    <costumer id="C1" status="regular">
+      <fullname>Salma Zahra</fullname>
+      <email>salma@mail.com</email>
+    </costumer>
+    <costumer id="C2" status="vip">
+      <fullname>Yassine K.</fullname>
+      <email>yassine@mail.com</email>
+    </costumer>
+  </customers>
+
+  <orders>
+    <order no="O1001" date="2026-01-12" customer="C1">
+      <items>
+        <item product="PR2" quantity="2"/>
+      </items>
+      <payment method="card" paid="true"/>
+    </order>
+
+    <order no="O1002" date="2026-01-13" customer="C2">
+      <items>
+        <item product="PR1" quantity="1"/>
+        <item product="PR2" quantity="1"/>
+      </items>
+      <payment method="cash" paid="false"/>
+    </order>
+  </orders>
+</store>

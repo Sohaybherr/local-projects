@@ -1,0 +1,30 @@
+
+<!ELEMENT converence (praticipants,sessions,tickets)>
+<!ATTLIST converence
+code CDATA #REQUIRED
+city CDATA #REQUIRED
+data CDATA #REQUIRED>
+<!ELEMENT participants (participant+)>
+<!ELEMENT participant (name,email,country)>
+<!ATTLIST participant
+id ID #REQUIRED
+type (student|pro) #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT sessions (session+)>
+<!ELEMENT session (title,speaker,duration,room,tags)>
+<!ELEMENT title (#PCDATA)>
+<!ATTLIST speaker ref IDREF #REQUIRED>
+<!ATTLIST duration minutes CDATA #REQUIRED>
+<!ELEMENT room (#PCDATA)>
+<!ELEMENT tags (tag+)>
+<!ELEMENT tag (#PCDATA)>
+<!ELEMENT tickets (ticket+)>
+<!ATTLIST ticket  
+id ID #REQUIRED
+participant IDREF #REQUIRED
+category (vip|standard) #REQUIRED
+price CDATA #REQUIRED 
+>
+<!ENTITY a  "<a>">

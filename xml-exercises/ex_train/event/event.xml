@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="event.xsl"?>
+
+<event code="EVT2023" date="2024-09-15" ville="Tunis">
+  <participant>
+    <invite>
+      <num>1</num>
+      <nom>Smith</nom>
+      <nometa>John Smith</nometa>
+      <langue>ang</langue>
+    </invite>
+
+    <inter>
+      <num>2</num>
+      <nom>Doe</nom>
+      <nometa>Jane Doe</nometa>
+      <langue>fra</langue>
+      <theme>Technology</theme>
+    </inter>
+
+    <invite>
+      <num>3</num>
+      <nom>Ali</nom>
+      <nometa>Ali Hassan</nometa>
+      <langue>ara</langue>
+    </invite>
+  </participant>
+</event>
+

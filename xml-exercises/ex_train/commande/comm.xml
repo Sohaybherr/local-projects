@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="comm.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<commande numero="11">
+    <client></client>
+    <date>1111-11-11</date>
+    <total>1</total>
+    <articles>
+        <article>
+            <nom></nom>
+            <quantite>1</quantite>
+            <prix_uni>1</prix_uni>
+        </article>
+    </articles>
+</commande>

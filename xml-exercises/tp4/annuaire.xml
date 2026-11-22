@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contact xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="annuaire.xsd">
+    <nom>DOE</nom>
+    <prenom>John</prenom>
+    <numeros>
+        <telephone>+123456789</telephone>
+        <email>john.doe@example.com</email>
+        <email>john.alt@example.com</email>
+    </numeros>
+</contact>

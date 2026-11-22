@@ -1,0 +1,9 @@
+<!ELEMENT UNI (nom,departements)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT departements (departement+)>
+<!ELEMENT departement (nom,(enseigants|responsable))>
+<!ELEMENT enseigants (enseigant+)>
+<!ELEMENT enseigant (nom,grade)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT grade (#PCDATA)>
+<!ELEMENT responsable (#PCDATA)>

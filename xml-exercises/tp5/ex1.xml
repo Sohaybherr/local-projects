@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+
+<article>
+    <titre>A propos des DTD</titre>
+
+    <corps>
+        <p>
+            Les DTD,
+            <important>c'est facile</important> :
+            il suffit de lire le cours XML
+            <cite ref="XML"/>
+        </p>
+
+        <p>
+            Il y a aussi de bons livres
+            <cite ref="AmannRigaux"/>
+        </p>
+    </corps>
+
+    <references>
+        <référence code="XML">
+            <nom>Site Officiel XML</nom>
+            <url>https://www.w3.org/TR/xml/</url>
+        </référence>
+
+        <référence code="AmannRigaux">
+            <intitulé>Comprendre XSLT</intitulé>
+            <auteur>Bernd Amann</auteur>
+            <auteur>Philippe Rigaux</auteur>
+            <date>2002</date>
+            <éditeur>O’Reilly</éditeur>
+        </référence>
+    </references>
+
+</article>

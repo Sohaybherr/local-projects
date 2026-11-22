@@ -1,0 +1,10 @@
+1- //book[contains(title,'Python')]
+2- //book[price>30 and price<45]
+3- distinct-values(//book/author)
+4- //book[not(genre)]
+   //title[starts-with(.,'M')]
+   //book[year<=2021 and author='sara']
+   //book[genre='ai'and not(contains(title,'Python'))]
+   //book[price> sum(//price) div count(//price) ]
+   (//book)[last()]
+   (//title)[3]

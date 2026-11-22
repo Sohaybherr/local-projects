@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>375Scores API Tester</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f7fb;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #d8dee9;
+      --accent: #0f766e;
+      --accent-dark: #115e59;
+      --danger: #b42318;
+      --code: #111827;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      padding: 18px 24px;
+      background: var(--panel);
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .base-url {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: minmax(260px, 360px) 1fr;
+      gap: 18px;
+      padding: 18px;
+      min-height: calc(100vh - 76px);
+    }
+
+    aside,
+    section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    aside {
+      padding: 16px;
+    }
+
+    .group {
+      margin-bottom: 18px;
+    }
+
+    .group h2 {
+      margin: 0 0 8px;
+      font-size: 14px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    button {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--text);
+      padding: 9px 10px;
+      border-radius: 6px;
+      text-align: left;
+      cursor: pointer;
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    button:hover {
+      border-color: var(--accent);
+    }
+
+    button.active {
+      background: #e6f4f1;
+      border-color: var(--accent);
+      color: var(--accent-dark);
+      font-weight: 700;
+    }
+
+    .request-panel {
+      display: grid;
+      grid-template-rows: auto auto 1fr;
+      min-width: 0;
+    }
+
+    .toolbar {
+      padding: 16px;
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      gap: 12px;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 90px 1fr auto;
+      gap: 8px;
+      align-items: center;
+    }
+
+    label {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    select,
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 9px 10px;
+      font: inherit;
+      color: var(--text);
+      background: #fff;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+      font-family: Consolas, monospace;
+      font-size: 13px;
+    }
+
+    .send {
+      width: auto;
+      margin: 0;
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+      text-align: center;
+      min-width: 96px;
+    }
+
+    .send:hover {
+      background: var(--accent-dark);
+      border-color: var(--accent-dark);
+    }
+
+    .body-wrap {
+      display: none;
+    }
+
+    .body-wrap.visible {
+      display: block;
+    }
+
+    .quick-fields {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(90px, 1fr));
+      gap: 8px;
+    }
+
+    .quick-fields label {
+      display: grid;
+      gap: 4px;
+    }
+
+    .status {
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .status.error {
+      color: var(--danger);
+    }
+
+    pre {
+      margin: 0;
+      padding: 16px;
+      overflow: auto;
+      color: #e5e7eb;
+      background: var(--code);
+      font-size: 13px;
+      line-height: 1.45;
+      min-height: 360px;
+      height: 100%;
+    }
+
+    @media (max-width: 860px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+
+      .row {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-fields {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .send {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>375Scores API Tester</h1>
+    <div class="base-url" id="baseUrl"></div>
+  </header>
+
+  <main>
+    <aside id="endpointList"></aside>
+
+    <section class="request-panel">
+      <div class="toolbar">
+        <div class="row">
+          <label for="method">Method</label>
+          <select id="method">
+            <option>GET</option>
+            <option>POST</option>
+            <option>PUT</option>
+            <option>DELETE</option>
+          </select>
+          <button class="send" id="sendBtn">Send</button>
+        </div>
+
+        <div class="row">
+          <label for="path">Path</label>
+          <input id="path" value="/api/v1/home">
+          <span></span>
+        </div>
+
+        <div class="quick-fields">
+          <label for="competitionId">Competition ID
+            <input id="competitionId" value="1">
+          </label>
+          <label for="seasonId">Season ID
+            <input id="seasonId" value="1">
+          </label>
+          <label for="teamId">Team ID
+            <input id="teamId" value="1">
+          </label>
+          <label for="playerId">Player ID
+            <input id="playerId" value="1">
+          </label>
+          <label for="matchId">Match ID
+            <input id="matchId" value="1">
+          </label>
+          <label for="userId">User ID
+            <input id="userId" value="1">
+          </label>
+        </div>
+
+        <div class="body-wrap" id="bodyWrap">
+          <label for="body">JSON Body</label>
+          <textarea id="body">{
+  "email": "user1@example.com",
+  "password": "$2b$12$hashed_placeholder_user_1"
+}</textarea>
+        </div>
+      </div>
+
+      <div class="status" id="status">Choose an endpoint or press Send.</div>
+      <pre id="output">{}</pre>
+    </section>
+  </main>
+
+  <script>
+    const endpoints = [
+      {
+        title: "Business",
+        items: [
+          ["GET", "/api/v1/home"],
+          ["GET", "/api/v1/search?q=man"],
+          ["GET", "/api/v1/teams/1/details"],
+          ["GET", "/api/v1/players/1/details"],
+          ["GET", "/api/v1/competitions/1/details"],
+          ["GET", "/api/v1/competitions/1/details?seasonId=1"],
+          ["GET", "/api/v1/competitions/1/seasons/1/details"],
+          ["GET", "/api/v1/matches/1/details"],
+          ["GET", "/api/v1/users/1/profile"]
+        ]
+      },
+      {
+        title: "Countries",
+        items: [
+          ["GET", "/api/v1/countries"],
+          ["GET", "/api/v1/countries/1"],
+          ["GET", "/api/v1/countries/name/Spain"]
+        ]
+      },
+      {
+        title: "Competitions",
+        items: [
+          ["GET", "/api/v1/competitions"],
+          ["GET", "/api/v1/competitions/1"],
+          ["GET", "/api/v1/competitions/1/details"],
+          ["GET", "/api/v1/competitions/1/details?seasonId=1"],
+          ["GET", "/api/v1/competitions/1/seasons/1/details"],
+          ["GET", "/api/v1/competitions/1/type"],
+          ["GET", "/api/v1/competitions/country/Spain"]
+        ]
+      },
+      {
+        title: "Teams",
+        items: [
+          ["GET", "/api/v1/teams"],
+          ["GET", "/api/v1/teams/1"],
+          ["GET", "/api/v1/teams/name/Real"],
+          ["GET", "/api/v1/teams/country/1"],
+          ["GET", "/api/v1/teams/competition/1/season/1"]
+        ]
+      },
+      {
+        title: "Players",
+        items: [
+          ["GET", "/api/v1/players"],
+          ["GET", "/api/v1/players/1"],
+          ["GET", "/api/v1/players/name/John"],
+          ["GET", "/api/v1/players/team/1"],
+          ["GET", "/api/v1/players/position/ST"]
+        ]
+      },
+      {
+        title: "Matches",
+        items: [
+          ["GET", "/api/v1/matches"],
+          ["GET", "/api/v1/matches/1"],
+          ["GET", "/api/v1/matches/competition/1/season/1"],
+          ["GET", "/api/v1/matches/competition/1/date-range?startDate=2026-08-01&endDate=2026-08-31"],
+          ["GET", "/api/v1/matches/team/1/season/1/competition/1"]
+        ]
+      },
+      {
+        title: "News",
+        items: [
+          ["GET", "/api/v1/news"],
+          ["GET", "/api/v1/news/latest"],
+          ["GET", "/api/v1/news/1"]
+        ]
+      },
+      {
+        title: "Users",
+        items: [
+          ["GET", "/api/v1/users"],
+          ["GET", "/api/v1/users/1"],
+          ["GET", "/api/v1/users/username/test"],
+          ["GET", "/api/v1/users/email/user1@example.com"],
+          ["POST", "/api/v1/users/login"],
+          ["POST", "/api/v1/users"],
+          ["PUT", "/api/v1/users/1"],
+          ["DELETE", "/api/v1/users/1"]
+        ]
+      }
+    ];
+
+    const endpointList = document.getElementById("endpointList");
+    const methodInput = document.getElementById("method");
+    const pathInput = document.getElementById("path");
+    const bodyInput = document.getElementById("body");
+    const bodyWrap = document.getElementById("bodyWrap");
+    const competitionIdInput = document.getElementById("competitionId");
+    const seasonIdInput = document.getElementById("seasonId");
+    const teamIdInput = document.getElementById("teamId");
+    const playerIdInput = document.getElementById("playerId");
+    const matchIdInput = document.getElementById("matchId");
+    const userIdInput = document.getElementById("userId");
+    const output = document.getElementById("output");
+    const statusBox = document.getElementById("status");
+    const sendBtn = document.getElementById("sendBtn");
+    const baseUrl = `${window.location.protocol}//${window.location.host}`;
+
+    document.getElementById("baseUrl").textContent = baseUrl;
+
+    function setBodyVisibility() {
+      bodyWrap.classList.toggle("visible", ["POST", "PUT"].includes(methodInput.value));
+    }
+
+    function applyQuickValues(path) {
+      return path
+        .replaceAll("/competitions/1", `/competitions/${competitionIdInput.value || 1}`)
+        .replaceAll("competition/1", `competition/${competitionIdInput.value || 1}`)
+        .replaceAll("season/1", `season/${seasonIdInput.value || 1}`)
+        .replaceAll("seasonId=1", `seasonId=${seasonIdInput.value || 1}`)
+        .replaceAll("/teams/1", `/teams/${teamIdInput.value || 1}`)
+        .replaceAll("/team/1", `/team/${teamIdInput.value || 1}`)
+        .replaceAll("/players/1", `/players/${playerIdInput.value || 1}`)
+        .replaceAll("/matches/1", `/matches/${matchIdInput.value || 1}`)
+        .replaceAll("/users/1", `/users/${userIdInput.value || 1}`);
+    }
+
+    function selectEndpoint(method, path, button) {
+      document.querySelectorAll("aside button").forEach((item) => item.classList.remove("active"));
+      if (button) {
+        button.classList.add("active");
+      }
+
+      methodInput.value = method;
+      pathInput.value = path;
+      setBodyVisibility();
+    }
+
+    function renderEndpoints() {
+      endpointList.innerHTML = "";
+      endpoints.forEach((group) => {
+        const wrap = document.createElement("div");
+        wrap.className = "group";
+
+        const title = document.createElement("h2");
+        title.textContent = group.title;
+        wrap.appendChild(title);
+
+        group.items.forEach(([method, path]) => {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.textContent = `${method} ${path}`;
+          button.addEventListener("click", () => selectEndpoint(method, path, button));
+          wrap.appendChild(button);
+        });
+
+        endpointList.appendChild(wrap);
+      });
+    }
+
+    async function sendRequest() {
+      const method = methodInput.value;
+      const rawPath = pathInput.value.startsWith("/") ? pathInput.value : `/${pathInput.value}`;
+      const path = applyQuickValues(rawPath);
+      const options = { method, headers: {} };
+
+      if (["POST", "PUT"].includes(method)) {
+        options.headers["Content-Type"] = "application/json";
+        try {
+          options.body = JSON.stringify(JSON.parse(bodyInput.value || "{}"));
+        } catch (error) {
+          statusBox.textContent = `Invalid JSON body: ${error.message}`;
+          statusBox.className = "status error";
+          return;
+        }
+      }
+
+      statusBox.textContent = `Loading ${method} ${path}...`;
+      statusBox.className = "status";
+      output.textContent = "";
+
+      const startedAt = performance.now();
+
+      try {
+        const response = await fetch(path, options);
+        const text = await response.text();
+        const duration = Math.round(performance.now() - startedAt);
+        let payload = text;
+
+        try {
+          payload = JSON.stringify(JSON.parse(text), null, 2);
+        } catch (_) {
+          payload = text || "(empty response)";
+        }
+
+        statusBox.textContent = `${response.status} ${response.statusText} - ${duration}ms`;
+        statusBox.className = response.ok ? "status" : "status error";
+        output.textContent = payload;
+      } catch (error) {
+        statusBox.textContent = error.message;
+        statusBox.className = "status error";
+        output.textContent = "";
+      }
+    }
+
+    methodInput.addEventListener("change", setBodyVisibility);
+    sendBtn.addEventListener("click", sendRequest);
+
+    renderEndpoints();
+    setBodyVisibility();
+  </script>
+</body>
+</html>

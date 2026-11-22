@@ -1,0 +1,20 @@
+<!ELEMENT evenement (titre,theme,date,lieu,budget,activite+,participant)>
+<!ELEMENT titre (#PCDATA)>
+<!ELEMENT theme (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT lieu (#PCDATA)>
+<!ATTLIST lieu place CDATA #IMPLIED>
+<!ELEMENT budget (montant,devise)>
+<!ELEMENT montant (#PCDATA)>
+<!ELEMENT devise (#PCDATA)>
+<!ELEMENT activite (titre,duree)>
+<!ELEMENT duree (#PCDATA)>
+<!ELEMENT participant ((invite|inter)+)>
+<!ELEMENT invite (num,nom,nometa,langue)>
+<!ELEMENT inter (num,nom,nometa,langue,theme)>
+<!ELEMENT num (#PCDATA)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT nometa (#PCDATA)>
+<!ELEMENT theme (#PCDATA)>
+<!ELEMENT langue (#PCDATA)>
+<!ATTLIST langue lg (fr|en|ar) #REQUIRED>

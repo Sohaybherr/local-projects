@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE COMMENDE[
+    <!ELEMENT COMMENDE (CLIENT,DATE,PRODUITS)>
+    <!ATTLIST COMMENDE NEMURO CDATA #REQUIRED>
+    <!ELEMENT CLIENT (#PCDATA)>
+    <!ELEMENT DATE (#PCDATA)>
+    <!ELEMENT PRODUITS (PRODUIT+)>
+    <!ELEMENT PRODUIT (NOM,QUANTITE,PRIX)>
+    <!ELEMENT NOM (#PCDATA)>
+    <!ELEMENT QUANTITE (#PCDATA)>
+    <!ELEMENT PRIX (#PCDATA)>
+]>
+<COMMENDE NEMURO="112">
+    <CLIENT>zrzor</CLIENT>
+    <DATE>12-11-1111</DATE>
+    <PRODUITS>
+        <PRODUIT>
+            <NOM>ww</NOM>
+            <QUANTITE>1</QUANTITE>
+            <PRIX>11</PRIX>
+        </PRODUIT>
+        <PRODUIT>
+            <NOM>aaa</NOM>
+             <QUANTITE>1</QUANTITE>
+            <PRIX>11</PRIX>
+        </PRODUIT>
+    </PRODUITS>
+</COMMENDE>

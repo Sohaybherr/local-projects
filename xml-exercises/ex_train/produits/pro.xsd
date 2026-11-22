@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:simpleType name="cate_type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Info"/>
+            <xs:enumeration value="maison"/>
+            <xs:enumeration value="Sport"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="prix_type">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"></xs:minExclusive>
+            <xs:maxExclusive value="5001"></xs:maxExclusive>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="produit_type">
+        <xs:sequence>
+            <xs:element name="prix" type="prix_type"></xs:element>
+            <xs:element name="cate" type="cate_type"></xs:element>
+            <xs:element name="nom" type="xs:string"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="id" use="required"></xs:attribute>
+    </xs:complexType>
+    <xs:element name="produits">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="produit" type="produit_type" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+  
+</xs:schema>

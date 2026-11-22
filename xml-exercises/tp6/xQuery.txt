@@ -1,0 +1,58 @@
+1️⃣ Extraire le titre de toutes les TODO
+for $t in //todo
+return $t/title
+
+2️⃣ Extraire toutes les deadlines
+//todo/@deadline
+
+3️⃣ Items critiques
+//item[@level="critic"]
+
+4️⃣ Pour chaque TODO : titre + deadline
+for $t in //todo
+return
+  <todo>
+    <title>{data($t/title)}</title>
+    <deadline>{data($t/@deadline)}</deadline>
+  </todo>
+
+5️⃣ Items contenant un lien
+//item[lien]
+
+6️⃣ Items contenant "pain" ou "fromage"
+//item[contains(lower-case(.), "pain")
+     or contains(lower-case(.), "fromage")]
+
+7️⃣ Paragraphes contenant <important>
+//par[important]
+
+8️⃣ Pour chaque TODO : titre + nombre total d’items
+for $t in //todo
+return
+  <todo>
+    <title>{data($t/title)}</title>
+    <nbItems>{count($t/items/item)}</nbItems>
+  </todo>
+
+9️⃣ Toutes les dates triées (ordre croissant)
+for $d in //date
+order by xs:date($d)
+return $d
+
+🔟 Nouveau document XML (FLWOR complet)
+<todos>
+{
+for $t in //todo
+return
+  <todo>
+    <title>{data($t/title)}</title>
+    <deadline>{data($t/@deadline)}</deadline>
+    <items>
+    {
+      for $i in $t/items/item
+      return <item>{normalize-space($i)}</item>
+    }
+    </items>
+  </todo>
+}
+</todos>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<encyclopedie xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ex2.xsd">
+
+    <personne datenaissance="1942-01-08" sexe="H">
+        <nom>HAWKING</nom>
+        <prenom>Stephen</prenom>
+        <publication>Une brève histoire du temps</publication>
+    </personne>
+
+    <personne datenaissance="1932-07-13" sexe="H">
+        <nom>REEVES</nom>
+        <prenom>Hubert</prenom>
+        <publication>L'Univers expliqué à mes petits-enfants</publication>
+    </personne>
+
+    <personne datenaissance="1879-03-14" sexe="H">
+        <nom>EINSTEIN</nom>
+        <prenom>Albert</prenom>
+        <publication>Des ondes gravitationnelles</publication>
+        <publication>Sur la théorie quantique du rayonnement</publication>
+    </personne>
+
+    <personne datenaissance="1867-11-07" sexe="F">
+        <nom>CURIE</nom>
+        <prenom>Marie</prenom>
+        <publication>Traité de radioactivité</publication>
+    </personne>
+
+</encyclopedie>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CV>
+
+    <Informations type="Personnelles">
+        <Nom>Adnane</Nom>
+        <Prenom>Abdli</Prenom>
+        <Date_de_Naissance>2004-01-30</Date_de_Naissance>
+        <Adresse>Fes</Adresse>
+        <Email>adnanragol@gmail.com</Email>
+        <Telephone>0649855428</Telephone>
+    </Informations>
+    <Competences>
+        <Competence type="Techniques">
+            <Competence>Programmation C </Competence>
+            <Competence>SQL</Competence>
+        </Competence>
+        <Competence type="Langues">
+            <Competence>Arabe</Competence>
+            <Competence>Français</Competence>
+        </Competence>
+    </Competences>
+    <ParcoursAcademique>
+        <Formation>
+            <Intitule date="2024/2025" Faculte="San paolo University">Master</Intitule>
+        </Formation>
+    </ParcoursAcademique>
+    <ExperiencesProfessionnelles>
+        <ExperienceProfessionnelle type=" TechniqueExperience" date="2024/2025" lieu="San Paolo"    >
+            <Poste>junnior Développeur</Poste>
+            <Organisme>oracle</Organisme>
+            <Description>Développement </Description>
+        </ExperienceProfessionnelle>
+        <ExperienceProfessionnelle type=" TheoriqueExperience" date="2024/2025" lieu="Fès"    >
+            <Poste>Organisateur</Poste>
+            <Organisme>Rockstar</Organisme>
+            <Description>presentation sur GamingDev </Description>
+        </ExperienceProfessionnelle>
+    </ExperiencesProfessionnelles>
+    <CentresInteret>
+        <Interet type="Sport">Football</Interet>
+        <Interet type="Loisir">Problem Solving</Interet>
+        <Interet type="Informatique">Programmation</Interet>
+    </CentresInteret>
+
+</CV>

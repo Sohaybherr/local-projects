@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="test.xsl"?>
+<todolist owner="Fabien Torre" xmlns:xsi="http://www.w3.org/1999/XSL/Transform"
+    xsi:noNamespaceSchemaLocation="test.xsd">
+
+
+  <!-- TODO LIST Courses semaine -->
+  <todo deadline="01/12/2006" illustration="1.jpg">
+    <title>Courses de la semaine</title>
+
+    <items>
+      <item>du pain</item>
+      <item>du fromage</item>
+      <item>des yaourts</item>
+      <item>des legumes frais et bio</item>
+    </items>
+
+    <commentaires>
+      <par>
+        Voir aussi ce qu'il faut prévoir pour la
+        <important>soirée du samedi</important>
+        <date>02/12/2006</date>.
+      </par>
+      <par>
+        Et puis penser à
+        <important>prendre mon panier</important>,
+        pour ne pas revenir avec des
+        <lien url="1.jpg">
+          sacs plastiques
+        </lien> !
+      </par>
+    </commentaires>
+  </todo>
+
+  <!-- TODO LIST Organisation Noël -->
+  <todo deadline="24/12/2006" illustration="2.gif">
+    <title>Préparation du réveillon</title>
+
+    <items>
+      <item>
+        trouver le menu, on peut regarder sur
+        <lien url="2.gif">
+          Marmiton
+        </lien>
+      </item>
+      <item level="critic">
+        commander le fromage avant le
+        <date>16/12/2006</date>
+      </item>
+      <item>acheter et décorer le sapin</item>
+      <item>demander à Marc son déguisement de père Noël</item>
+    </items>
+
+    <commentaires>
+      <par>
+        Le problème de fond est de savoir
+        <important>combien on va être</important>,
+        il faudrait le savoir avant le
+        <date>09/12/2006</date>.
+      </par>
+    </commentaires>
+  </todo>
+
+  <!-- TODO LIST Enseignement -->
+  <todo deadline="30/06/2007" illustration="3.jpg">
+    <title>Ce que je dois faire en enseignement</title>
+
+    <items>
+      <item level="critic">
+        préparer un sujet d'examen pour les M1 ID
+      </item>
+      <item>
+        préparer un sujet d'examen pour les M2 GIDE
+      </item>
+      <item>
+        comprendre les
+        <lien url="3.jpg">
+          XML Information Set
+        </lien>
+      </item>
+      <item>
+        parler du calendrier du second semestre au M1 ID
+      </item>
+    </items>
+  </todo>
+
+  <!-- TODO LIST Recherche -->
+  <todo deadline="01/01/2010" illustration="4.jpg">
+    <title>Ce que je dois faire en recherche</title>
+
+    <items>
+      <item>
+        trouver un algorithme efficace pour calculer
+        un biAFER canonique
+      </item>
+      <item level="critic">
+        relire la thèse de Patrick
+      </item>
+      <item level="critic">
+        reviewer le papier de TDMM
+        (avant le <date>15/12/2006</date>)
+      </item>
+      <item>
+        écrire un article sur les
+        <lien url="4.jpg">
+          schémas XML
+        </lien>
+      </item>
+    </items>
+  </todo>
+
+</todolist>

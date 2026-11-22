@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<produits xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="pro.xsd">
+    <produit id="11">
+        <prix>1</prix>
+        <cate>maison</cate>
+        <nom></nom>
+    </produit>
+     <produit id="11">
+        <prix>5000</prix>
+        <cate>Info</cate>
+        <nom></nom>
+    </produit>
+</produits>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-model href="ex.dtd" type="application/xml-dtd" ?>
+<exam id="Q1" type="normal">
+    <matiere></matiere>
+    <date></date>
+    <salle></salle>
+</exam>

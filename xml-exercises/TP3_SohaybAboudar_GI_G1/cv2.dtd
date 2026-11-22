@@ -1,0 +1,39 @@
+<!ELEMENT CV (Informations, Competences, ParcoursAcademique, ExperiencesProfessionnelles, CentresInteret)>
+<!ELEMENT Informations (Nom, Prenom, Date_de_Naissance, Adresse, Email, Telephone)>
+<!ATTLIST Informations
+    type CDATA #REQUIRED    
+>
+<!ELEMENT Nom (#PCDATA)>
+<!ELEMENT Prenom (#PCDATA)>
+<!ELEMENT Date_de_Naissance (#PCDATA)>
+<!ELEMENT Adresse (#PCDATA)>
+<!ELEMENT Email (#PCDATA)>
+<!ELEMENT Telephone (#PCDATA)>
+<!ELEMENT Competences (Competence+)>
+<!ELEMENT Competence (Competence+)>
+<!ATTLIST Competence
+    type CDATA #REQUIRED
+>
+<!ELEMENT ParcoursAcademique (Formation+)>
+<!ELEMENT Formation (Intitule)>
+<!ELEMENT Intitule (#PCDATA)>
+<!ATTLIST Intitule
+    date CDATA #IMPLIED
+    Faculte CDATA #IMPLIED
+>
+<!ELEMENT ExperiencesProfessionnelles (ExperienceProfessionnelle+)>
+<!ELEMENT ExperienceProfessionnelle (Poste, Organisme, Description)>
+<!ATTLIST ExperienceProfessionnelle
+    type CDATA #REQUIRED
+    date CDATA #REQUIRED
+    lieu CDATA #REQUIRED
+>
+<!ELEMENT Poste (#PCDATA)>
+<!ELEMENT Organisme (#PCDATA)>
+<!ELEMENT Description (#PCDATA)>
+<!ELEMENT CentresInteret (Interet+)>
+<!ELEMENT Interet (#PCDATA)>
+<!ATTLIST Interet
+    type CDATA #REQUIRED
+>
+    

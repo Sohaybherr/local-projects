@@ -1,0 +1,13 @@
+<!ENTITY % infocommon "nom, prenom, mail_acad">
+<!ELEMENT uni (etudiants, enseignants, per_admins)>
+<!ELEMENT etudiants (etudiant*)>
+<!ELEMENT etudiant (%infocommon; )>
+<!ELEMENT enseignants (enseignant*)>
+<!ELEMENT enseignant (%infocommon; , grade?)>
+<!ELEMENT per_admins (per_admin*)>
+<!ELEMENT per_admin (%infocommon; , fonction?)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT prenom (#PCDATA)>
+<!ELEMENT mail_acad (#PCDATA)>
+<!ELEMENT grade (#PCDATA)>
+<!ELEMENT fonction (#PCDATA)>

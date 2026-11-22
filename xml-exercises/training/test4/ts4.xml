@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ts4.xsl"?>
+
+
+<catalogue>
+    <produit prix="120">Chaussures</produit>
+    <produit prix="40">T-shirt</produit>
+    <produit prix="250">Montre</produit>
+</catalogue>

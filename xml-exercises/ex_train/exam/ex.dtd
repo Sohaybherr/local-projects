@@ -1,0 +1,8 @@
+<!ELEMENT exam (matiere,date,salle)>
+<!ELEMENT matiere (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT salle (#PCDATA)>
+<!ATTLIST exam 
+id ID #REQUIRED
+type (normal|rattrapage) #REQUIRED
+>

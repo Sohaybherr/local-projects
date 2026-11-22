@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CV>
+
+    <InformationsPersonnelles>
+        <Nom>Ronaldo</Nom>
+        <Prenom>Rivaldo</Prenom>
+        <Date_de_Naissance>2000-01-01</Date_de_Naissance>
+        <Adresse>San Paolo</Adresse>
+        <Email></Email>
+        <Telephone>111111111</Telephone>
+    </InformationsPersonnelles>
+    <Competences>
+        <Techniques>
+            <Competence>Gta san</Competence>
+            <Competence>Gta V</Competence>
+        </Techniques>
+        <Langues>
+            <Competence>Arabe</Competence>
+            <Competence>Français</Competence>
+        </Langues>
+    </Competences>
+    <ParcoursAcademique>
+        <Formation>
+            <Intitule>Master</Intitule>
+            <Etablissement>San Paolo University</Etablissement>
+            <Ville>San Paolo</Ville>
+            <Annee>2025</Annee>
+        </Formation>
+    </ParcoursAcademique>
+    <ExperiencesProfessionnelles>
+        <Experience>
+            <Poste>Développeur </Poste>
+            <Organisme>Oracle</Organisme>
+            <Ville>San Paolo</Ville>
+            <Date>2024/2025</Date>
+            <Description>Développement d une application web </Description>
+        </Experience>
+    </ExperiencesProfessionnelles>
+    <CentresInteret>
+        <Interet>Football</Interet>
+        <Interet>Gaming</Interet>
+        <Interet>Programmation</Interet>
+    </CentresInteret>
+
+</CV>

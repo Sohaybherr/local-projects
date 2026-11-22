@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="uft-8" ?>
+<?xml-model href="uni.dtd" type="application/xml-dtd"?>
+<UNI>
+    <nom>11</nom>
+    <departements>
+        <departement>
+            <nom></nom>
+            <enseigants>
+                <enseigant>
+                    <nom></nom>
+                    <grade></grade>
+                </enseigant>
+            </enseigants>
+        </departement>
+    </departements>
+</UNI>

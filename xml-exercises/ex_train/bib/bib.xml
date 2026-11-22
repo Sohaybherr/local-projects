@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="bib.dtd" type="application/xml-dtd"?>
+<BIB>
+    <LIVRE ISBN="123">
+        <TITRE>112</TITRE>
+        <AUTEUR>111</AUTEUR>
+        <ANNEE>1111</ANNEE>
+    </LIVRE>
+</BIB>

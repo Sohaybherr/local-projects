@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classe>
+        <etudiant>
+            <nom>zrzor</nom>
+            <prenom>Rivaldo</prenom>
+            <age>20</age>
+        </etudiant>
+         <etudiant>
+            <nom>zidane</nom>
+            <prenom>zizo</prenom>
+            <age>22</age>
+        </etudiant>
+</classe>

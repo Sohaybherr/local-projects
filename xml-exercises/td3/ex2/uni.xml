@@ -1,0 +1,25 @@
+<uni>
+<etudiants>
+    <etudiant>
+        <nom>Doe</nom>
+        <prenom>Mary</prenom>
+        <mail_acad>mary.doe@example.com</mail_acad>
+    </etudiant>
+</etudiants>
+<enseignants>
+    <enseignant>
+        <nom>Smith</nom>
+        <prenom>John</prenom>
+        <mail_acad>john.smith@example.com</mail_acad>
+        <grade>MC</grade>
+    </enseignant>
+</enseignants>
+<per_admins>
+    <per_admin>
+        <nom>Admin</nom>
+        <prenom>Jane</prenom>
+        <mail_acad>jane.admin@example.com</mail_acad>
+        <fonction>comptable</fonction>
+    </per_admin>
+</per_admins>
+</uni>

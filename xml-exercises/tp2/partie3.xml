@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE conference SYSTEM "partie3.dtd">
+<conference lieu="fes" annee="2025" nom="Conférence Internationale sur les Technologies Avancées">
+<URLs><URL type="zoom_url">www.zoom.com</URL>
+<URL type="meet_url">www.meet.com</URL>
+</URLs>
+    <programme>
+        <session id="p1" thematique="Intelligence Artificielle" periode="matin" etat="hybride">
+            <date>2025-09-15</date>
+            <presentations>
+            <presentation id="l1">
+                <titre>Les avancées récentes en IA</titre>
+                <intervenants>
+                    <intervenant role="auteur" affiliation_ref="aff1">   
+                    <nom> messi</nom>
+                    <prenom>amine</prenom>
+                    <affiliations>
+                    <affiliation>Université de rabat</affiliation>
+                    <affiliation>Université de Fès</affiliation>
+                    </affiliations>
+                    </intervenant>
+                    <intervenant role="co-auteur" affiliation_ref="aff2">
+                    <nom>ronaldo</nom>
+                    <prenom>cristiano</prenom>
+                    <affiliations><affiliation>Université de Lisbonne</affiliation>
+                    <affiliation>Université de madrid</affiliation>
+                    </affiliations>
+                    </intervenant>
+                 </intervenants>
+                 <salle>Auditorium A</salle>
+            </presentation>
+            <presentation id="l2" >
+                <titre>Apprentissage profond et réseaux de neurones</titre>
+                <intervenants>
+                    <intervenant role="auteur">
+                    <nom>rivaldo</nom>
+                    <prenom>sohayb</prenom>
+                    <affiliations><affiliation>Université de san paolo</affiliation>
+                    </affiliations>
+                    </intervenant>
+                    <intervenant role="co-auteur">
+                    <nom>karim</nom>
+                    <prenom>benzema</prenom>
+                    <affiliations><affiliation>Université de paris</affiliation></affiliations>
+                    </intervenant>
+                 </intervenants>
+                 <salle>Auditorium B</salle>
+            </presentation>
+            </presentations>
+        </session>
+        <session id="p2" thematique="Technologies Vertes" periode="après-midi" etat="en_presentiel">
+          <date>2025-09-15</date>
+          <presentations>
+            <presentation id="l1" >
+                <titre>Innovations dans les énergies renouvelables</titre>
+                <intervenants>
+                    <intervenant role="auteur" affiliation_ref="aff3">
+                    <nom>ronaldo</nom>
+                    <prenom>nazario</prenom>
+                    <affiliations><affiliation>Université de rio</affiliation>
+                    </affiliations>
+                    </intervenant>
+                    <intervenant role="co-auteur" affiliation_ref="aff3">
+                    <nom>zidane</nom>
+                    <prenom>zinedine</prenom>
+                    <affiliations><affiliation>Université de marseille</affiliation></affiliations> 
+                    </intervenant>
+                 </intervenants>
+                 <salle>Salle 101</salle>
+            </presentation>
+            <presentation id="l2" >
+                <titre>Smart Cities et durabilité</titre>
+                <intervenants>
+                    <intervenant role="auteur">
+                    <nom>neymar</nom>
+                    <prenom>jr</prenom>
+                    <affiliations><affiliation>Université de sao paolo</affiliation>
+                    </affiliations>
+                    </intervenant>
+                    <intervenant role="co-auteur">
+                    <nom>mbappe</nom>
+                    <prenom>kylian</prenom>
+                    <affiliations><affiliation>Université de paris</affiliation></affiliations> 
+                    </intervenant>
+                 </intervenants>
+                 <salle>Salle 102</salle>
+            </presentation>
+        </session>
+    </programme>
+</conference>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:simpleType name="usename_type">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="4"></xs:minLength>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="email_type">
+        <xs:restriction base="xs:string">
+           <xs:pattern value='.+@.+'></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="role_type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="admin"></xs:enumeration>
+            <xs:enumeration value="user"></xs:enumeration>
+            <xs:enumeration value="guest"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="user">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="username" type="usename_type"></xs:element>
+                <xs:element name="email" type="email_type"></xs:element>
+                <xs:element name="role" type="role_type"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

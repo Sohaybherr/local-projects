@@ -1,0 +1,22 @@
+let $d := doc('conve.xml')/conference/sessions/session/speaker
+$s := doc('conve.xml')/conference/participants/participant
+return
+<speakers>
+  {
+    for $n in $d
+    return <speaker id="{$n/@ref}">
+        <name>{ $s[@id=$n/@ref]/name/text() }</name>
+        <talks>
+          {
+            for $t in doc('conve.xml')/conference/sessions/session[speaker/@ref=$n/@ref]/title
+            return <talk>{ $t/text() }</talk>
+          }
+    </speaker>
+  }
+</speakers>
+
+for $d in doc('conve.xml')/conference/sessions/session
+where $d/duration/@minutes>30
+order by $d/duration/@minutes descending
+return
+$d
